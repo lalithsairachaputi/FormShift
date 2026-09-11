@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormShift</title>
+
+    <link
+      rel="stylesheet"
+      href="https://db.onlinewebfonts.com/c/5ac3fe7c6abd2f62067f266d89671492?family=HelveticaNowDisplay-Medium"
+    />
+    <link
+      rel="stylesheet"
+      href="https://db.onlinewebfonts.com/c/1aa3377e489837a26d019bba501e779d?family=HelveticaNowDisplayW01-Rg"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page-transition">
+    <!-- Background video, scrubbed by mouse movement -->
+    <video
+      id="bg-video"
+      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260530_042513_df96a13b-6155-4f6e-8b93-c9dee66fba08.mp4"
+      muted
+      playsinline
+      preload="auto"
+    ></video>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <a class="logo-text" href="index1.html" aria-label="Return to FormShift home">FormShift</a>
+        <span class="logo-asterisk">&#x2733;&#xFE0E;</span>
+      </div>
+
+    
+      
+
+      <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu" class="mobile-menu">
+      <a href="#">Formats</a>
+      <a href="#">Pipeline</a>
+      <a href="#">Docs</a>
+      <a href="#">Pricing</a>
+      <a href="#" class="mobile-cta">Get in touch</a>
+    </div>
+
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-content">
+        <p class="intro-label">
+          Hey there, meet FORMA,<br />
+          FormShift&apos;s Format &amp; Report Mapping Assistant
+        </p>
+
+        <p id="typewriter" class="typewriter">
+          <span id="typewriter-text"></span
+          ><span id="typewriter-cursor" class="cursor"></span>
+        </p>
+
+        <div id="pills" class="pills">
+          <button type="button" class="pill chat-trigger">Try a press advisory</button>
+          <button type="button" class="pill chat-trigger">Try a technical brief</button>
+          <button type="button" class="pill chat-trigger">See the fact-check</button>
+          <button type="button" class="pill chat-trigger">How the pipeline works</button>
+          <button type="button" id="copy-email" class="pill pill-outline">
+            <span>Reach us: <span class="underline">hello@formshift.dev</span></span>
+            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect x="1" y="1" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1" />
+              <rect x="4" y="4" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1" />
+            </svg>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Chat box -->
+    <div id="chat-overlay" class="chat-overlay"></div>
+    <div id="chat-box" class="chat-box" role="dialog" aria-label="Chat with FORMA">
+      <div class="chat-header">
+        <div class="chat-header-text">
+          <div class="chat-header-title">
+            <span class="chat-dot"></span>
+            FORMA
+          </div>
+          <div class="chat-header-subtitle">Extract &rarr; Generate &rarr; Verify</div>
+        </div>
+        <button type="button" id="chat-close" class="chat-close" aria-label="Close chat">&times;</button>
+      </div>
+
+      <div id="chat-messages" class="chat-messages"></div>
+
+      <form id="chat-form" class="chat-form">
+        <input
+          id="chat-input"
+          class="chat-input"
+          type="text"
+          placeholder="Paste an article or ask a question..."
+          autocomplete="off"
+        />
+        <button type="submit" class="chat-send" aria-label="Send message">&#8594;</button>
+      </form>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
