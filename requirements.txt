@@ -1,0 +1,24 @@
+# Core
+pandas
+numpy
+
+# PyTorch
+torch
+
+# Hugging Face
+transformers
+huggingface-hub
+tokenizers
+safetensors
+
+# Sentence embeddings / retrieval
+sentence-transformers
+
+# API backend
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+
+# HTTP / utilities
+requests

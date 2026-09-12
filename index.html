@@ -1,114 +1,329 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FormShift</title>
 
-    <link
-      rel="stylesheet"
-      href="https://db.onlinewebfonts.com/c/5ac3fe7c6abd2f62067f266d89671492?family=HelveticaNowDisplay-Medium"
-    />
-    <link
-      rel="stylesheet"
-      href="https://db.onlinewebfonts.com/c/1aa3377e489837a26d019bba501e779d?family=HelveticaNowDisplayW01-Rg"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body class="page-transition">
-    <!-- Background video, scrubbed by mouse movement -->
-    <video
-      id="bg-video"
-      src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260530_042513_df96a13b-6155-4f6e-8b93-c9dee66fba08.mp4"
-      muted
-      playsinline
-      preload="auto"
-    ></video>
+  <title>FormShift</title>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-      <div class="logo">
-        <a class="logo-text" href="index1.html" aria-label="Return to FormShift home">FormShift</a>
-        <span class="logo-asterisk">&#x2733;&#xFE0E;</span>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Quantico:wght@400;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+
+<body class="page-transition">
+
+
+  <!-- ============================================================ -->
+  <!-- BACKGROUND VIDEO                                              -->
+  <!-- ============================================================ -->
+
+  <video
+    id="bg-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260530_042513_df96a13b-6155-4f6e-8b93-c9dee66fba08.mp4">
+  </video>
+
+
+  <!-- ============================================================ -->
+  <!-- NAVBAR                                                        -->
+  <!-- ============================================================ -->
+
+  <nav class="navbar">
+
+    <div class="logo">
+
+      <a
+        class="logo-text"
+        href="index1.html">
+        FormShift
+      </a>
+
+      <span class="logo-asterisk">✳︎</span>
+
+    </div>
+
+
+    <button
+      id="hamburger"
+      class="hamburger"
+      aria-label="Toggle menu"
+      aria-expanded="false">
+
+      <span></span>
+      <span></span>
+      <span></span>
+
+    </button>
+
+  </nav>
+
+
+  <!-- ============================================================ -->
+  <!-- MOBILE MENU                                                   -->
+  <!-- ============================================================ -->
+
+  <div id="mobile-menu" class="mobile-menu">
+
+    <a href="#">Formats</a>
+    <a href="#">Pipeline</a>
+    <a href="#">Docs</a>
+    <a href="#">Pricing</a>
+
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- HERO                                                           -->
+  <!-- ============================================================ -->
+
+  <main class="hero">
+
+    <div class="hero-content">
+
+      <p class="intro-label">
+        Hey there, meet FORMA,<br>
+        FormShift's Format &amp; Report Mapping Assistant
+      </p>
+
+
+      <p class="typewriter">
+
+        <span id="typewriter-text"></span>
+
+        <span
+          id="typewriter-cursor"
+          class="cursor">
+        </span>
+
+      </p>
+
+
+      <!-- ======================================================== -->
+      <!-- ACTION PILLS                                               -->
+      <!-- ======================================================== -->
+
+      <div id="pills" class="pills">
+
+        <button
+          type="button"
+          class="pill chat-trigger">
+          Try a press advisory
+        </button>
+
+
+        <button
+          type="button"
+          class="pill chat-trigger">
+          Try a technical brief
+        </button>
+
+
+        <button
+          type="button"
+          class="pill chat-trigger">
+          See the fact-check
+        </button>
+
+
+        <button
+          type="button"
+          class="pill chat-trigger">
+          How the pipeline works
+        </button>
+
       </div>
 
-    
-      
+    </div>
 
-      <button id="hamburger" class="hamburger" aria-label="Toggle menu" aria-expanded="false">
-        <span></span>
-        <span></span>
-        <span></span>
+  </main>
+
+
+  <!-- ============================================================ -->
+  <!-- CHAT OVERLAY                                                   -->
+  <!-- ============================================================ -->
+
+  <div
+    id="chat-overlay"
+    class="chat-overlay">
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- CHAT BOX                                                       -->
+  <!-- ============================================================ -->
+
+  <div
+    id="chat-box"
+    class="chat-box"
+    role="dialog"
+    aria-label="Chat with FORMA">
+
+
+    <!-- ========================================================== -->
+    <!-- CHAT HEADER                                                 -->
+    <!-- ========================================================== -->
+
+    <div class="chat-header">
+
+      <div class="chat-header-text">
+
+        <div class="chat-header-title">
+
+          <span class="chat-dot"></span>
+
+          FORMA
+
+        </div>
+
+
+        <div class="chat-header-subtitle">
+          Extract → Generate → Verify
+        </div>
+
+      </div>
+
+
+      <button
+        type="button"
+        id="chat-close"
+        class="chat-close"
+        aria-label="Close chat">
+
+        &times;
+
       </button>
-    </nav>
 
-    <!-- Mobile menu overlay -->
-    <div id="mobile-menu" class="mobile-menu">
-      <a href="#">Formats</a>
-      <a href="#">Pipeline</a>
-      <a href="#">Docs</a>
-      <a href="#">Pricing</a>
-      <a href="#" class="mobile-cta">Get in touch</a>
     </div>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="hero-content">
-        <p class="intro-label">
-          Hey there, meet FORMA,<br />
-          FormShift&apos;s Format &amp; Report Mapping Assistant
-        </p>
 
-        <p id="typewriter" class="typewriter">
-          <span id="typewriter-text"></span
-          ><span id="typewriter-cursor" class="cursor"></span>
-        </p>
+    <!-- ========================================================== -->
+    <!-- CHAT MESSAGES                                                -->
+    <!-- ========================================================== -->
 
-        <div id="pills" class="pills">
-          <button type="button" class="pill chat-trigger">Try a press advisory</button>
-          <button type="button" class="pill chat-trigger">Try a technical brief</button>
-          <button type="button" class="pill chat-trigger">See the fact-check</button>
-          <button type="button" class="pill chat-trigger">How the pipeline works</button>
-          <button type="button" id="copy-email" class="pill pill-outline">
-            <span>Reach us: <span class="underline">hello@formshift.dev</span></span>
-            <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="1" y="1" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1" />
-              <rect x="4" y="4" width="7" height="7" rx="1" stroke="currentColor" stroke-width="1" />
-            </svg>
-          </button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Chat box -->
-    <div id="chat-overlay" class="chat-overlay"></div>
-    <div id="chat-box" class="chat-box" role="dialog" aria-label="Chat with FORMA">
-      <div class="chat-header">
-        <div class="chat-header-text">
-          <div class="chat-header-title">
-            <span class="chat-dot"></span>
-            FORMA
-          </div>
-          <div class="chat-header-subtitle">Extract &rarr; Generate &rarr; Verify</div>
-        </div>
-        <button type="button" id="chat-close" class="chat-close" aria-label="Close chat">&times;</button>
-      </div>
-
-      <div id="chat-messages" class="chat-messages"></div>
-
-      <form id="chat-form" class="chat-form">
-        <input
-          id="chat-input"
-          class="chat-input"
-          type="text"
-          placeholder="Paste an article or ask a question..."
-          autocomplete="off"
-        />
-        <button type="submit" class="chat-send" aria-label="Send message">&#8594;</button>
-      </form>
+    <div
+      id="chat-messages"
+      class="chat-messages">
     </div>
 
-    <script src="script.js"></script>
-  </body>
+
+    <!-- ========================================================== -->
+    <!-- CHAT FORM                                                    -->
+    <!-- ========================================================== -->
+
+    <form
+      id="chat-form"
+      class="chat-form">
+
+
+      <!-- ======================================================== -->
+      <!-- HIDDEN FILE INPUT                                         -->
+      <!-- ======================================================== -->
+
+      <input
+        id="chat-file"
+        type="file"
+        accept=".txt,.md,.csv,.json,text/plain,text/csv,application/json"
+        hidden
+      />
+
+
+      <!-- ======================================================== -->
+      <!-- UPLOAD BUTTON                                              -->
+      <!-- ======================================================== -->
+
+      <button
+        type="button"
+        id="chat-upload"
+        class="chat-upload"
+        aria-label="Upload article"
+        title="Upload article">
+
+        <svg
+          width="18"
+          height="18"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true">
+
+          <path
+            d="M12 16V4"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+
+          <path
+            d="M7 9L12 4L17 9"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+
+          <path
+            d="M5 20H19"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+          />
+
+        </svg>
+
+      </button>
+
+
+      <!-- ======================================================== -->
+      <!-- ARTICLE INPUT                                              -->
+      <!-- ======================================================== -->
+
+      <input
+        id="chat-input"
+        class="chat-input"
+        type="text"
+        placeholder="Paste an article or upload a file..."
+        autocomplete="off"
+      />
+
+
+      <!-- ======================================================== -->
+      <!-- SEND BUTTON                                                -->
+      <!-- ======================================================== -->
+
+      <button
+        type="submit"
+        class="chat-send"
+        aria-label="Send message">
+
+        &#8594;
+
+      </button>
+
+
+    </form>
+
+  </div>
+
+
+  <!-- ============================================================ -->
+  <!-- JAVASCRIPT                                                     -->
+  <!-- ============================================================ -->
+
+  <script src="script.js"></script>
+
+</body>
+
 </html>

@@ -1,0 +1,98 @@
+# ==============================
+# Python
+# ==============================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# ==============================
+# Virtual Environment
+# ==============================
+.venv/
+venv/
+env/
+ENV/
+
+# ==============================
+# Environment / Secrets
+# ==============================
+.env
+.env.*
+!.env.example
+
+# ==============================
+# IDE / Editors
+# ==============================
+.vscode/
+.idea/
+*.code-workspace
+
+# ==============================
+# OS files
+# ==============================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==============================
+# Python tooling
+# ==============================
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ==============================
+# Logs
+# ==============================
+*.log
+logs/
+
+# ==============================
+# Local databases / temporary data
+# ==============================
+*.db
+*.sqlite
+*.sqlite3
+*.tmp
+*.temp
+
+# ==============================
+# Model / ML caches
+# ==============================
+models/
+.cache/
+huggingface_cache/
+transformers_cache/
+
+# ==============================
+# Generated training artifacts
+# ==============================
+training_datasets/
+
+# ==============================
+# Large / raw datasets
+# ==============================
+data/raw/
+data/splits/
+
+# ==============================
+# Generated outputs
+# ==============================
+outputs/
+results/
+reports/
+
+# ==============================
+# Python build artifacts
+# ==============================
+build/
+dist/
+*.egg-info/
+
+# ==============================
+# Jupyter
+# ==============================
+.ipynb_checkpoints/
